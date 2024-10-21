@@ -1,0 +1,66 @@
+Day 8 Task: Shell Scripting Challenge
+
+
+
+#!/bin/bash
+#----------------------------
+
+# SHELL SCRIPTING
+
+#----------------------------
+
+
+
+# Task 1: Comments
+
+# This script demonstrates various basic features of bash scripting such as echo, variables, and wildcards.
+
+
+
+# Task 2: echo
+
+# Echo is used to display a message.
+
+echo "Welcome to the shell scripting"
+
+
+
+# Task 3: Variables
+
+# Declaring variables to store data
+
+num1=10
+
+num2=20
+
+
+
+# Task 4: Using Variables
+
+# Performing addition using variables and printing the result
+
+sum=$((num1+num2))
+
+echo "The sum of num1 and num2 is $sum"
+
+
+
+# Task 5: Using Built-in Variables
+
+# Displaying built-in variable values like the script name, number of arguments passed, and the current working directory.
+
+echo "The name of this script is: $0"
+
+echo "You have passed $# arguments to this script."
+
+echo "Your current working directory is: $PWD"
+
+
+
+# Task 6: Wildcards
+
+# Listing all .sh files in the current directory using wildcards
+
+echo "Listing all .sh files in the current directory:"
+
+ls *.sh
