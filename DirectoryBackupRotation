@@ -1,0 +1,16 @@
+#!/bin/bash
+#-----------------
+<<note
+The script will create a timestamped backup folder inside the specified directory and copy all the files into it. It will also check for existing backup folders and remove the oldest backups to keep only the last 3 backups.
+note
+#-----------------
+
+time=$(date +"%Y%m%d_%H%M%S")
+
+tar -cf backup_$time.tar $1
+
+ls -t *.tar | tail -n +4 | xargs rm -f
+
+top=$(ls -t *.tar | head -1)
+
+echo "Backup created: $1$top"
